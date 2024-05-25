@@ -11,8 +11,13 @@ class Ship:
          self.image = pygame.transform.scalet(self.image, )
          self.rect = self.image.get_rect()
          self.screen_rect = screen.get_rect()
-         self.rect.center = self.screen_react.senterx
+         self.rect.center = self.screen_react.centerx
          self.rect.bottom = self.screen_rect.bottom
+         self.moveing_right = False
+
+    def update(self):
+        if self.moving_right:
+            self.rect.centerx +=1
 
     def blitme(self):
         """
